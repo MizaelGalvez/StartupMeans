@@ -1,0 +1,21 @@
+.root {
+}
+
+.App-logo {
+}
+
+.App-title {
+}
+
+.root {
+}
+
+body {
+  background-color: #F9F9F9;
+  color: #FF0000;
+}
+
+@keyframes esperar {
+  from { opacity: 0;}
+  to { opacity: 1; }
+}
