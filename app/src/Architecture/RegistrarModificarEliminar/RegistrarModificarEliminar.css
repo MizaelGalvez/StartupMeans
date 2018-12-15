@@ -1,26 +1,13 @@
 .Principal {
-  padding-top: 20px;
+
   display: flex;
   flex-direction: column;
+  //animation: Login-logo-rigth 1s;
   background-color: white;
   text-align: center;
   align-items: center;
   margin: 0px;
   padding-bottom: 30px;
-}
-.PrimerFila {
-  padding-left: 180px;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-}
-.SegundaFila {
-  padding-left: 180px;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
 }
 .AnuncioRegistrado {
   display: flex;

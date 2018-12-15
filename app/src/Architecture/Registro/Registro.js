@@ -22,8 +22,6 @@ class Registro extends Component {
 
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePass = this.handleChangePass.bind(this);
-    this.handleScan = this.handleScan.bind(this)
-    this.openImageDialog = this.openImageDialog.bind(this)
   }
 
 
@@ -42,7 +40,7 @@ class Registro extends Component {
     var result = this.state.result;
     var ErrorCrear = false;
 
-    if (this.state.result !== "") {
+
       if (password !== "" && password === confirmarPassword) {
         if (password.length >= 6) {
                 firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -79,7 +77,6 @@ class Registro extends Component {
                         Contador: 0,
                       });
                       console.log(uid);
-                      console.log(result);
 
                   }
 
@@ -89,7 +86,7 @@ class Registro extends Component {
 
               swal({
                   title: "Registrado !!!",
-                  text: "Email y QR registrado",
+                  text: "Email y Contraseña registradas",
                   icon: "success",
                   button: "Iniciar Sesion",
                 });
@@ -116,15 +113,7 @@ class Registro extends Component {
             button: "re-escribir",
           });
       }
-    }else {
-      swal({
-          title: "Escanee el QR",
-          text: "es necesario para el registro",
-          icon: "warning",
-          button: "Escanear",
-        });
-      //alert('Es requerido el escanear el QR');
-    }
+
 
 
 
@@ -140,20 +129,15 @@ class Registro extends Component {
 
    }
 
+   RegresarLogin = (event) => {
+     this.props.dispatch({
+       type: 'Usuario_Accion',
+       UserValidation:'login',
+
+     })
+   }
 
 
-  handleScan(result){
-    if(result){
-      this.setState({ result })
-    }
-  }
-  handleError(err){
-    console.error(err)
-  }
-  openImageDialog() {
-    this.refs.qrReader1.openImageDialog()
-    //<input className='BotonRegistro' type="file" onClick={this.openImageDialog}></input>
-  }
 
 
 
@@ -162,6 +146,10 @@ class Registro extends Component {
     return (
       <div className="Registro">
         <div className="contenedorRegistro">
+            <div>
+              <a className="boton_personalizado_IS" onClick={this.RegresarLogin}>Regresar Atras !!</a>
+            </div>
+
             <header className="Registro-header">
               <img src={logo} className="Registro-logo" alt="logo" />
               <h1 className="Registro-title">Registrate</h1>
@@ -179,9 +167,6 @@ class Registro extends Component {
               <input type="password" value={this.state.Repetirpass} onChange={this.handleChangeRepetirPass} required placeholder="  Confirmar Contraseña" />
             </div>
 
-            <div>
-              <a className="boton_personalizado_escanear" onClick={this.openImageDialog}>Fotografiar tu Rostro</a>
-            </div>
 
             <div>
               <a className="boton_personalizado_IS" onClick={this.RealizarRegistro}>Registrarse</a>

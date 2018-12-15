@@ -5,6 +5,54 @@ div.Navegacion {
   align-items: center;
   justify-content: space-between;
 }
+div.NavegacionIzquierda {
+  width:180px;
+  height: 100%;
+  position: fixed;
+  background-color: #FC0000;
+
+}
+.menuDesplegable ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+    width: 100%;
+    border-right-style: solid;
+    border-left-color: #FC0000;
+	}
+	.menuDesplegable a {
+		display: block;
+		padding: 1em;
+		background-color: white;
+		text-decoration: none;
+		color: #54657E;
+
+	}
+	.menuDesplegable a:hover {
+		background-color: #EBEFF3;
+
+	}
+
+
+	.menuDesplegable ul li ul {
+		display: none;
+	}
+	.menuDesplegable ul li a:hover + ul, .menuDesplegable ul li ul:hover {
+		display: block;
+    border-left-style: solid;
+    border-left-color: #FC0000;
+	}
+
+
+
+  .Menu-logo {
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 40px;
+    margin-left: 35px;
+    margin-top: 30px;
+
+  }
 
 .Navegacion-logo {
   height: 20px;
@@ -32,4 +80,12 @@ div.Navegacion {
   color: #D83438;
   background-color: white;
 
+}
+.ulinterno a {
+  padding-left: 30px;
+  font-size: 14px;
+}
+.ulinterno a:hover {
+  font-weight: bold;
+  color:#FC0000;
 }

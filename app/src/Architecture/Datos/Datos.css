@@ -1,50 +1,66 @@
 .Data {
+  padding-left: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.Asistentes {
-  align-items: center;
+.Titulos {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+.Opciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TIPOaccionA {
+  padding: 15px;
+  margin: 100px;
+  color: #FFFFFF;
+  margin-top: 25px;
+  font-weight: bold;
+  background-color: #03BD5B;
+  border-radius: 15px;
+}
+.TIPOaccionM {
+  padding: 15px;
+  margin: 100px;
+  color: #FFFFFF;
+  margin-top: 25px;
+  font-weight: bold;
+  background-color: #FF9400;
+  border-radius: 15px;
+}
+.TIPOaccionE {
+  padding: 15px;
+  margin: 100px;
+  color: #FFFFFF;
+  margin-top: 25px;
+  font-weight: bold;
+  background-color: #FC0000;
+  border-radius: 15px;
 }
 
-.Tienes {
-  margin-top: 125px;
+
+.Selector {
+  padding: 20px;
+  margin: 20px;
+  color: #54657E;
+  margin-top: 25px;
   font-weight: bold;
   font-size: 20px;
-}
-.TienesNum {
-  font-weight: bold;
-  font-size: 60px;
-}
-.TextRegistros {
-  font-weight: bold;
-  font-size: 20px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFFFFF;
 }
 
-.Botones-datos {
-
-  padding: 10px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  color: white;
-  text-align: center;
+.Selector:hover {
+  border-bottom-style: solid;
+  border-bottom-color: #FC0000;
 }
 
-.Data-button {
-  font-size: 20px;
-  color: #D83438;
-  margin-left: 30px;
-  margin-right: 30px;
-  font-weight: bold;
-  padding: 8px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 .Data-button:hover {
   font-size: 20px;
   color: white;
@@ -55,4 +71,76 @@
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
+}
+.NombreProducto {
+  border-color: #C9D3DF;
+  background-color: #ECEFF4;
+  width: 60%;
+}
+.NombreProducto2 {
+  border-color: #C9D3DF;
+  background-color: #ECEFF4;
+  width: 40%;
+}
+.RadioButon{
+  height: 18px;
+  width: 18px;
+}
+.espacioDerecha {
+  margin-left: 250px;
+}
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #404040;
+  margin-right: 140px;
+}
+
+.conjuntoimagen{
+  display: flex;
+  flex-direction: column;
+}
+.conjuntoimagen img{
+  height: 80px;
+  width: 80px;
+}
+.conjuntoimagen a{
+  align-items: flex-end;
+  border-radius: 10px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  color: #303030;
+  background-color: #303030;
+  color: white;
+  border-radius: 6px;
+  border: 2px solid #101010;
+  cursor: pointer;
+}
+.botonesInferiores{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton_personalizado_Accion{
+  margin-left: 500px;
+  align-items: flex-end;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #0081D5;
+  border-radius: 6px;
+  border: 2px solid #0081D5;
+}
+.boton_personalizado_Accion:hover{
+  color: #ffffff;
+  background-color: #0081D5;
+  border: 2px solid #045285;
 }
